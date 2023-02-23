@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 
 const contactsRouter = require("./app/routes/contact.route");
+const userRoute = require("./app/routes/user.router");
+
 const ApiError = require("./app/api-error");
 
 const app = express();
@@ -11,6 +13,8 @@ app.use(express.json());
 
 //route
 app.use("/api/contacts", contactsRouter);
+app.use("/api/users", userRoute);
+
 
 
 // handle 404 response
