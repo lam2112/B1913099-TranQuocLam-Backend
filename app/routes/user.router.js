@@ -13,6 +13,6 @@ router
 
 router.route("/role/all").get(users.findRoleUser);
 
-router.route("/login/user").get(users.checkUser);
+router.route("/login/user").post(users.checkUser);
 
 module.exports = router;
